@@ -15,8 +15,8 @@ a {
   box-sizing: border-box;
 }
 
-body {
-  scroll-behavior: "smooth";
+* {
+  font-family: "Space Grotesk", sans-serif;
 }
 
 html {

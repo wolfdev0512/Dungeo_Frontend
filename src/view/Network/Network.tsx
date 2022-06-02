@@ -1,0 +1,70 @@
+import React from "react";
+import Image from "next/image";
+
+// @styled-component
+import {
+  Layout,
+  Background,
+  MainLayout,
+  TextContainer,
+  Text,
+  Text1,
+  Row,
+  Network,
+  ImageContainer1,
+  ImageContainer2,
+  Imagelayout,
+} from "./Network.styled";
+
+// @component
+import Container from "components/Container/Container";
+
+// @assets
+import BackgroundImage from "assets/png/Network.png";
+import Skeleton1 from "assets/png/skeleton-1.png";
+import Skeleton2 from "assets/png/skeleton-2.png";
+import Skeleton3 from "assets/png/skeleton-3.png";
+import Skeleton4 from "assets/png/skeleton-4.png";
+
+// ----------------------------------------------------------
+
+export default function index() {
+  return (
+    <Layout>
+      <Background image={BackgroundImage.src}>
+        <Container>
+          <MainLayout>
+            <TextContainer>
+              <Text>Spookeletons</Text>
+              <Text1>
+                are hanging out around <Network>SOLANA</Network>
+              </Text1>
+            </TextContainer>
+            <Row>
+              <ImageContainer1>
+                <Imagelayout>
+                  <Image src={Skeleton1.src} alt="No Image" layout="fill" />
+                </Imagelayout>
+              </ImageContainer1>
+              <ImageContainer2>
+                <Imagelayout>
+                  <Image src={Skeleton2.src} alt="No Image" layout="fill" />
+                </Imagelayout>
+              </ImageContainer2>
+              <ImageContainer1>
+                <Imagelayout>
+                  <Image src={Skeleton3.src} alt="No Image" layout="fill" />
+                </Imagelayout>
+              </ImageContainer1>
+              <ImageContainer2>
+                <Imagelayout>
+                  <Image src={Skeleton4.src} alt="No Image" layout="fill" />
+                </Imagelayout>
+              </ImageContainer2>
+            </Row>
+          </MainLayout>
+        </Container>
+      </Background>
+    </Layout>
+  );
+}

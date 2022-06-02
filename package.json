@@ -13,7 +13,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-headroom": "^3.2.0",
-    "styled-components": "^5.3.5"
+    "react-icons": "^4.4.0",
+    "styled-components": "^5.3.5",
+    "swiper": "^8.2.2"
   },
   "devDependencies": {
     "@types/node": "17.0.38",
