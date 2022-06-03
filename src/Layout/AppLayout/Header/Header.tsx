@@ -68,7 +68,7 @@ const Header: React.FC = () => {
         <Container>
           <MainLayout>
             <LogoContainer back={LogoBg.src} top={scrollY == 0}>
-              <Image src={LogoImage} alt="No Image" layout="fill" b />
+              <Image src={LogoImage} alt="No Image" layout="fill" />
             </LogoContainer>
             <Menu>
               <MenuItem>Buy/Sell &SPKL</MenuItem>
