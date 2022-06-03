@@ -13,7 +13,7 @@ const Home: NextPage = () => {
     <HomeLayout>
       <Hero />
       <Network />
-      <NFTMeet />
+      {/* <NFTMeet /> */}
     </HomeLayout>
   );
 };

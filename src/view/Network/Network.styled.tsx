@@ -10,10 +10,9 @@ export const Layout = styled.div`
   justify-content: center;
   align-items: center;
 
-  background: black;
-
   padding-bottom: 200px;
 `;
+
 export const Background = styled.div<{ image: any }>`
   display: flex;
   justify-content: center;
@@ -50,7 +49,7 @@ export const ImageContainer1 = styled.div`
   position: relative;
 
   width: 270px;
-  height: 300px;
+  height: 270px;
 
   background: black;
 
@@ -65,7 +64,7 @@ export const ImageContainer1 = styled.div`
 `;
 export const ImageContainer2 = styled.div`
   width: 270px;
-  height: 300px;
+  height: 270px;
 
   border-radius: 40px;
 
@@ -89,12 +88,12 @@ export const TextContainer = styled.div`
 export const Text1 = styled.div`
   color: white;
   font-size: 56px;
+  line-height: 60px;
   margin-left: 95px;
-  width: 500px;
 `;
 
 export const Imagelayout = styled.div`
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 90%;
 `;

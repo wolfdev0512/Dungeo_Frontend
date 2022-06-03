@@ -35,28 +35,30 @@ export default function index() {
         <Container>
           <MainLayout>
             <TextContainer>
-              <Text>Spookeletons</Text>
+              <Text>Dungeon Goblins</Text>
               <Text1>
-                are hanging out around <Network>SOLANA</Network>
+                are hanging out around
+                <br />
+                <Network>DungeoNEAR platform.</Network>
               </Text1>
             </TextContainer>
             <Row>
-              <ImageContainer1>
+              <ImageContainer1 data-aos="fade-up">
                 <Imagelayout>
                   <Image src={Skeleton1.src} alt="No Image" layout="fill" />
                 </Imagelayout>
               </ImageContainer1>
-              <ImageContainer2>
+              <ImageContainer2 data-aos="fade-up">
                 <Imagelayout>
                   <Image src={Skeleton2.src} alt="No Image" layout="fill" />
                 </Imagelayout>
               </ImageContainer2>
-              <ImageContainer1>
+              <ImageContainer1 data-aos="fade-up">
                 <Imagelayout>
                   <Image src={Skeleton3.src} alt="No Image" layout="fill" />
                 </Imagelayout>
               </ImageContainer1>
-              <ImageContainer2>
+              <ImageContainer2 data-aos="fade-up">
                 <Imagelayout>
                   <Image src={Skeleton4.src} alt="No Image" layout="fill" />
                 </Imagelayout>
