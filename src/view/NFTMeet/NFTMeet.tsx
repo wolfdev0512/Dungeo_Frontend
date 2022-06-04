@@ -35,7 +35,7 @@ import FeatureImage1 from "assets/png/feature1.png";
 import FeatureImage2 from "assets/png/feature2.png";
 import FeatureImage3 from "assets/png/feature3.png";
 import FeatureImage4 from "assets/png/feature4.png";
-import Activebg from "assets/png/active-bg.png";
+import Activebg from "assets/png/Active-bg.png";
 
 import Container from "components/Container/Container";
 
