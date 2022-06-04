@@ -127,56 +127,137 @@ export const Letter = styled.div`
 
 export const ListingBlog = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   margin-top: 110px;
 `;
+
 export const Feature1 = styled.div`
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 export const FeaImageContainer1 = styled.div`
+  margin-top: 30px;
+
   display: flex;
   flex-direction: column;
-  & > *:not(:last-child) {
-    margin-bottom: 15px;
+  align-items: center;
+
+  border-radius: 40px;
+  text-align: center;
+
+  background: linear-gradient(186.21deg, #0f1826 4.91%, #020c1a 85.87%);
+  padding: 30px;
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 0px;
+  }
+  @media screen and (max-width: 570px) {
+    padding: 10px;
   }
 `;
 export const FeaImage1 = styled.div`
   width: 300px;
   height: 300px;
   position: relative;
+  margin-bottom: 15px;
+  @media screen and (max-width: 570px) {
+    width: 250px;
+    height: 250px;
+  }
 `;
 
 export const FeaImageText1 = styled.div`
-  width: 300px;
-  height: 56px;
-  font-size: 18px;
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  width: 300px;
+  height: 56px;
+  font-size: 18px;
+  font-weight: 500;
+
+  background: #141d2c;
+  color: white;
+
+  &:hover {
+    background: #f05a28;
+  }
+
+  ::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -10px;
+    border: 10px solid transparent;
+    border-top-color: #020c1a;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  ::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    right: -10px;
+    border: 10px solid transparent;
+    border-top-color: #020c1a;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  @media screen and (max-width: 570px) {
+    width: 250px;
+  }
 `;
 
-export const FeaTextContainer = styled.div`
+export const FeaTextContainer1 = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export const FeaTitle1 = styled.div`
+export const FeaTitle = styled.div`
   color: white;
+
   font-size: 56px;
+  font-weight: 800;
+
   line-height: 72px;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+  @media screen and (max-width: 570px) {
+    font-size: 42px;
+  }
 `;
-export const FeaSubTitle1 = styled.div`
+export const FeaSubTitle = styled.div`
   color: #f05a28;
-  font-size: 56px;
-  line-height: 72px;
+
+  font-size: 42px;
+  font-weight: 600;
+
   margin-bottom: 25px;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+  @media screen and (max-width: 570px) {
+    font-size: 32px;
+  }
 `;
 export const FeaText = styled.div`
   font-size: 18px;
   line-height: 28px;
   color: white;
   opacity: 0.7;
+  @media screen and (max-width: 570px) {
+    padding: 0px 10px;
+  }
 `;
 
 export const ImageContainer = styled.div<{ isActive: boolean }>`
@@ -184,4 +265,96 @@ export const ImageContainer = styled.div<{ isActive: boolean }>`
   flex-direction: column;
   align-items: center;
   opacity: ${({ isActive }) => (isActive ? 1 : 0.4)};
+`;
+export const Feature2 = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+`;
+
+export const FeaImageContainer2 = styled.div`
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 40px;
+  text-align: center;
+
+  background: linear-gradient(186.21deg, #0f1826 4.91%, #020c1a 85.87%);
+  padding: 30px;
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 0px;
+  }
+  @media screen and (max-width: 570px) {
+    padding: 10px;
+  }
+`;
+export const FeaImage2 = styled.div`
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin-bottom: 15px;
+  @media screen and (max-width: 570px) {
+    width: 250px;
+    height: 250px;
+  }
+`;
+export const FeaImageText2 = styled.div`
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 300px;
+  height: 56px;
+  font-size: 18px;
+  font-weight: 500;
+
+  background: #141d2c;
+  color: white;
+
+  &:hover {
+    background: #f05a28;
+  }
+
+  ::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -10px;
+    border: 10px solid transparent;
+    border-top-color: #020c1a;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  ::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    right: -10px;
+    border: 10px solid transparent;
+    border-top-color: #020c1a;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  @media screen and (max-width: 570px) {
+    width: 250px;
+  }
+`;
+export const FeaTextContainer2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-right: 75px;
+  @media screen and (max-width: 1024px) {
+    padding-right: 0px;
+  }
 `;

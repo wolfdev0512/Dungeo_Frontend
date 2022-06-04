@@ -8,16 +8,21 @@ import {
   TextContainer,
   SwiperLayout,
   Letter,
+  ImageContainer,
   ListingBlog,
   Feature1,
   FeaImageContainer1,
   FeaImage1,
   FeaImageText1,
-  FeaTextContainer,
-  FeaTitle1,
-  FeaSubTitle1,
+  FeaTextContainer1,
+  FeaTitle,
+  FeaSubTitle,
   FeaText,
-  ImageContainer,
+  Feature2,
+  FeaImageContainer2,
+  FeaImage2,
+  FeaImageText2,
+  FeaTextContainer2,
 } from "./NFTMeet.styled";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -34,7 +39,6 @@ import Image8 from "assets/png/swiper8.png";
 import FeatureImage1 from "assets/png/feature1.png";
 import FeatureImage2 from "assets/png/feature2.png";
 import FeatureImage3 from "assets/png/feature3.png";
-import FeatureImage4 from "assets/png/feature4.png";
 import Activebg from "assets/png/Active-bg.png";
 
 import Container from "components/Container/Container";
@@ -72,7 +76,7 @@ export default function index() {
               },
             }}
             autoplay={{
-              delay: 3000,
+              delay: 2000,
               disableOnInteraction: false,
             }}
             centeredSlides={true}
@@ -186,8 +190,8 @@ export default function index() {
           </Swiper>
         </SwiperContainer>
       </SwiperLayout>
-      <ListingBlog>
-        {/* <Container>
+      <Container>
+        <ListingBlog>
           <Feature1>
             <FeaImageContainer1>
               <FeaImage1>
@@ -195,63 +199,66 @@ export default function index() {
               </FeaImage1>
               <FeaImageText1>$SPKL</FeaImageText1>
             </FeaImageContainer1>
-            <FeaTextContainer>
-              <FeaTitle1>Feature #1</FeaTitle1>
-              <FeaSubTitle1>Spookeletons Token</FeaSubTitle1>
+            <FeaTextContainer1>
+              <FeaTitle>Feature #1</FeaTitle>
+              <FeaSubTitle>Follow us Goblin! Your Dungeon awaits!</FeaSubTitle>
               <FeaText>
-                There will be the creation of a Solana SPL token for
-                Spookeletons NFT. This will be denoted as $SPKL. This token will
-                be used to make transactions that can be done with Spookeletons.
-                <br /> $SPKL AIRDROP (Spookeletons Token):
-                <br /> The $SPKL token will be airdropped in 2 ways:
-                <br /> i. For Spookeletons minters, they will be receiving some
-                $SPKL tokens as a reward for minting. This will be received
-                every month for 2 years. (The original minters are not under
-                compulsion to hold Spookeletons to receive this $SPKL airdrop.)
+                The Dungeon Goblins NFTs are the first generative visual and
+                audible art NFTs on NEAR.
                 <br />
-                ii. For the first 3 months after the $SPKL token is launched,
-                current Spookeleton holders will be airdropped $SPKL tokens.
-                This airdrop will be received every day during the 3-month
-                period. The snapshots for the daily airdrop will be taken at any
-                random time in a day.
+                Our goal is to provide artists, visual and audible, a way to
+                plug their creations into video games and other various
+                platforms as well as give more value to their NFTs for
+                themselves and for those who hold, own, and stake them.
+                <br />
+                This NFT style of; a visual and audible, generative creation,
+                will open up the NFT community to people who are visually
+                impaired.
+                <br />
+                Each NFT will contain a generative short musical composition
+                that will contain rarity levels that match up to its visual
+                components. Each NFT earns from multiple pools of in-game
+                "purchased" items, as well as free mints and WL mint spots in
+                future NFT drops by the Jargon Ecosystem.
               </FeaText>
-            </FeaTextContainer>
+            </FeaTextContainer1>
           </Feature1>
-        </Container> */}
-        {/* <Feature1>
-          <FeaImageContainer1>
-            <FeaImage1></FeaImage1>
-            <FeaImageText1></FeaImageText1>
-          </FeaImageContainer1>
-          <FeaTextContainer>
-            <FeaTitle1></FeaTitle1>
-            <FeaSubTitle1></FeaSubTitle1>
-            <FeaText></FeaText>
-          </FeaTextContainer>
-        </Feature1>
-        <Feature1>
-          <FeaImageContainer1>
-            <FeaImage1></FeaImage1>
-            <FeaImageText1></FeaImageText1>
-          </FeaImageContainer1>
-          <FeaTextContainer>
-            <FeaTitle1></FeaTitle1>
-            <FeaSubTitle1></FeaSubTitle1>
-            <FeaText></FeaText>
-          </FeaTextContainer>
-        </Feature1>
-        <Feature1>
-          <FeaImageContainer1>
-            <FeaImage1></FeaImage1>
-            <FeaImageText1></FeaImageText1>
-          </FeaImageContainer1>
-          <FeaTextContainer>
-            <FeaTitle1></FeaTitle1>
-            <FeaSubTitle1></FeaSubTitle1>
-            <FeaText></FeaText>
-          </FeaTextContainer>
-        </Feature1> */}
-      </ListingBlog>
+
+          <Feature2>
+            <FeaTextContainer2>
+              <FeaTitle>Feature #2</FeaTitle>
+              <FeaSubTitle>
+                Benefits of Holding a DungeoNEAR Gen1 NFT
+              </FeaSubTitle>
+              <FeaText>
+                Earn a Royalty from our Parlor Games
+                <br />
+                Earn a Royalty from every DungeoNEAR NFT traded
+                <br />
+                Earn a Royalty for your held traits from the the in-game
+                purchases
+                <br />
+                Earn a Royalty from every game played of Dungeon Goblins as well
+                on future DungeoNEAR games
+                <br />
+                Earn in game trait based items and rewards
+                <br />
+                Free Jargon NFT mint(5-8N mint price)
+                <br />
+                Whitelist Spot for Jargon NFT mint
+                <br />
+                Stake-to-Earn Jargon
+              </FeaText>
+            </FeaTextContainer2>
+            <FeaImageContainer2>
+              <FeaImage2>
+                <Image src={FeatureImage2} layout="fill" alt="No Image" />
+              </FeaImage2>
+              <FeaImageText2>Ri¢hie Ri¢h Spooky</FeaImageText2>
+            </FeaImageContainer2>
+          </Feature2>
+        </ListingBlog>
+      </Container>
     </Layout>
   );
 }

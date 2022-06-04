@@ -14,8 +14,8 @@ interface ScrollButtonProps {
 // styeld component
 const ScrollButtonWrapper = styled.div<ScrollButtonProps>`
   position: fixed;
-  width: 50px;
-  height: 50px;
+  width: 74px;
+  height: 74px;
   background: red;
   color: white;
   text-transform: uppercase;
@@ -31,7 +31,7 @@ const ScrollButtonWrapper = styled.div<ScrollButtonProps>`
   transform: scale(${({ showButton }) => (showButton ? 1 : 0)});
   transition: all 0.4s ease-in;
   z-index: 100;
-  font-size: 12px;
+  font-size: 14px;
 `;
 
 const Row = styled.div`
@@ -81,7 +81,7 @@ const ScrollTop = () => {
     <>
       <ScrollButtonWrapper onClick={scrollToTop} showButton={enable}>
         <Row>
-          <IoIosArrowUp size={15} />
+          <IoIosArrowUp size={20} />
           <div>Top</div>
         </Row>
       </ScrollButtonWrapper>

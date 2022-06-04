@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 import { HomeLayout } from "styles/Styled";
 
 // @component
-import { Hero, Network, NFTMeet } from "view";
+import { FAQ, Hero, Network, NFTMeet, Roadmap } from "view";
 
 //--------------------------------------------------------------------
 
@@ -14,6 +14,8 @@ const Home: NextPage = () => {
       <Hero />
       <Network />
       <NFTMeet />
+      <Roadmap />
+      <FAQ />
     </HomeLayout>
   );
 };
