@@ -193,13 +193,13 @@ export default function index() {
       <Container>
         <ListingBlog>
           <Feature1>
-            <FeaImageContainer1>
+            <FeaImageContainer1 data-aos="fade-right">
               <FeaImage1>
                 <Image src={FeatureImage1} layout="fill" alt="No Image" />
               </FeaImage1>
               <FeaImageText1>$SPKL</FeaImageText1>
             </FeaImageContainer1>
-            <FeaTextContainer1>
+            <FeaTextContainer1 data-aos="fade-left">
               <FeaTitle>Feature #1</FeaTitle>
               <FeaSubTitle>Follow us Goblin! Your Dungeon awaits!</FeaSubTitle>
               <FeaText>
@@ -225,7 +225,7 @@ export default function index() {
           </Feature1>
 
           <Feature2>
-            <FeaTextContainer2>
+            <FeaTextContainer2 data-aos="fade-right">
               <FeaTitle>Feature #2</FeaTitle>
               <FeaSubTitle>
                 Benefits of Holding a DungeoNEAR Gen1 NFT
@@ -250,7 +250,7 @@ export default function index() {
                 Stake-to-Earn Jargon
               </FeaText>
             </FeaTextContainer2>
-            <FeaImageContainer2>
+            <FeaImageContainer2 data-aos="fade-left">
               <FeaImage2>
                 <Image src={FeatureImage2} layout="fill" alt="No Image" />
               </FeaImage2>
