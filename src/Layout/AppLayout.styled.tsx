@@ -6,5 +6,5 @@ export const AppLayoutWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  background: black;
+  background: #020c1a;
 `;

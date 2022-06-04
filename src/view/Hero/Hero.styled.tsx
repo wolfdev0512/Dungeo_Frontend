@@ -13,8 +13,9 @@ export const Layout = styled.div`
   @media screen and (max-width: 1250px) {
     padding: 70px 0px;
   }
+
   @media screen and (max-width: 575px) {
-    padding: 30px 0px 0px 0px;
+    padding: 50px 0px 0px 0px;
     margin-bottom: 50px;
   }
 `;
@@ -29,6 +30,9 @@ export const Collection = styled.div`
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const Text = styled.div`
@@ -42,9 +46,7 @@ export const Text = styled.div`
   }
   @media screen and (max-width: 768px) {
     font-size: 36px;
-  }
-  @media screen and (max-width: 480px) {
-    font-size: 32px;
+    text-align: center;
   }
   @media screen and (max-width: 480px) {
     font-size: 32px;

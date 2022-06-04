@@ -5,6 +5,7 @@ import {
   Text,
   TextColor,
   SwiperContainer,
+  TextContainer,
   SwiperLayout,
   Letter,
   ListingBlog,
@@ -16,6 +17,7 @@ import {
   FeaTitle1,
   FeaSubTitle1,
   FeaText,
+  ImageContainer,
 } from "./NFTMeet.styled";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -33,6 +35,8 @@ import FeatureImage1 from "assets/png/feature1.png";
 import FeatureImage2 from "assets/png/feature2.png";
 import FeatureImage3 from "assets/png/feature3.png";
 import FeatureImage4 from "assets/png/feature4.png";
+import Activebg from "assets/png/active-bg.png";
+
 import Container from "components/Container/Container";
 
 // ----------------------------------------------------------
@@ -41,14 +45,32 @@ export default function index() {
   return (
     <Layout>
       <SwiperLayout>
-        <Text>Meet with some of</Text>
-        <TextColor>Spookeletons</TextColor>
-        <SwiperContainer>
+        <TextContainer data-aos="fade-down">
+          <Text>Meet with some of</Text>
+          <TextColor>Dungeon Goblins</TextColor>
+        </TextContainer>
+        <SwiperContainer image={Activebg.src} data-aos="fade-up">
           <Swiper
             modules={[Pagination, Autoplay]}
-            spaceBetween={50}
             loop={true}
-            slidesPerView={6}
+            slidesPerView={1}
+            breakpoints={{
+              "1300": {
+                slidesPerView: 6,
+              },
+              "500": {
+                slidesPerView: 2,
+              },
+              "768": {
+                slidesPerView: 3,
+              },
+              "1024": {
+                slidesPerView: 4,
+              },
+              "1200": {
+                slidesPerView: 5,
+              },
+            }}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -59,20 +81,20 @@ export default function index() {
           >
             <SwiperSlide>
               {({ isActive }: any) => (
-                <>
+                <ImageContainer isActive={isActive}>
                   <Image
                     src={Image1.src}
                     alt="No Image"
                     width={220}
                     height={220}
                   />
-                  {isActive && <Letter>Spookeletons #1111</Letter>}{" "}
-                </>
+                  {isActive && <Letter>Spookeletons #1111</Letter>}
+                </ImageContainer>
               )}
             </SwiperSlide>
             <SwiperSlide>
               {({ isActive }: any) => (
-                <>
+                <ImageContainer isActive={isActive}>
                   <Image
                     src={Image2.src}
                     alt="No Image"
@@ -80,12 +102,12 @@ export default function index() {
                     height={220}
                   />
                   {isActive && <Letter>Spookeletons #2222</Letter>}{" "}
-                </>
+                </ImageContainer>
               )}
             </SwiperSlide>
             <SwiperSlide>
               {({ isActive }: any) => (
-                <>
+                <ImageContainer isActive={isActive}>
                   <Image
                     src={Image3.src}
                     alt="No Image"
@@ -93,12 +115,12 @@ export default function index() {
                     height={220}
                   />
                   {isActive && <Letter>Spookeletons #3333</Letter>}{" "}
-                </>
+                </ImageContainer>
               )}
             </SwiperSlide>
             <SwiperSlide>
               {({ isActive }: any) => (
-                <>
+                <ImageContainer isActive={isActive}>
                   <Image
                     src={Image4.src}
                     alt="No Image"
@@ -106,12 +128,12 @@ export default function index() {
                     height={220}
                   />
                   {isActive && <Letter>Spookeletons #4444</Letter>}{" "}
-                </>
+                </ImageContainer>
               )}
             </SwiperSlide>
             <SwiperSlide>
               {({ isActive }: any) => (
-                <>
+                <ImageContainer isActive={isActive}>
                   <Image
                     src={Image5.src}
                     alt="No Image"
@@ -119,12 +141,12 @@ export default function index() {
                     height={220}
                   />
                   {isActive && <Letter>Spookeletons #5555</Letter>}{" "}
-                </>
+                </ImageContainer>
               )}
             </SwiperSlide>
             <SwiperSlide>
               {({ isActive }: any) => (
-                <>
+                <ImageContainer isActive={isActive}>
                   <Image
                     src={Image6.src}
                     alt="No Image"
@@ -132,12 +154,12 @@ export default function index() {
                     height={220}
                   />
                   {isActive && <Letter>Spookeletons #6666</Letter>}
-                </>
+                </ImageContainer>
               )}
             </SwiperSlide>
             <SwiperSlide>
               {({ isActive }: any) => (
-                <>
+                <ImageContainer isActive={isActive}>
                   <Image
                     src={Image7.src}
                     alt="No Image"
@@ -145,12 +167,12 @@ export default function index() {
                     height={220}
                   />
                   {isActive && <Letter>Spookeletons #7777</Letter>}{" "}
-                </>
+                </ImageContainer>
               )}
             </SwiperSlide>
             <SwiperSlide>
               {({ isActive }: any) => (
-                <>
+                <ImageContainer isActive={isActive}>
                   <Image
                     src={Image8.src}
                     alt="No Image"
@@ -158,14 +180,14 @@ export default function index() {
                     height={220}
                   />
                   {isActive && <Letter>Spookeletons #8888</Letter>}{" "}
-                </>
+                </ImageContainer>
               )}
             </SwiperSlide>
           </Swiper>
         </SwiperContainer>
       </SwiperLayout>
       <ListingBlog>
-        <Container>
+        {/* <Container>
           <Feature1>
             <FeaImageContainer1>
               <FeaImage1>
@@ -195,7 +217,7 @@ export default function index() {
               </FeaText>
             </FeaTextContainer>
           </Feature1>
-        </Container>
+        </Container> */}
         {/* <Feature1>
           <FeaImageContainer1>
             <FeaImage1></FeaImage1>

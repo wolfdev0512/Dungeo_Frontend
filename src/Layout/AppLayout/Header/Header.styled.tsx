@@ -7,6 +7,7 @@ import Headroom from "react-headroom";
 
 export const Layout = styled.div`
   position: sticky;
+
   top: 0;
 
   width: 100vw;
@@ -15,7 +16,7 @@ export const Layout = styled.div`
   justify-content: center;
   align-items: center;
 
-  background: black;
+  background: #020c1a;
 
   padding-top: 10px;
 
@@ -34,6 +35,7 @@ export const MainLayout = styled.div`
 
 export const LogoContainer = styled.div<{ back: any; top: boolean }>`
   margin-top: 10px;
+
   position: relative;
 
   width: 180px;

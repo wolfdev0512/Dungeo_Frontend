@@ -1,17 +1,54 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 
-import { ScrollButtonWrapper, Row } from "./ScrollTop.styled";
+// styled system
+import styled from "styled-components";
 
-// @assets
+// icons
 import { IoIosArrowUp } from "react-icons/io";
+
+// type
+interface ScrollButtonProps {
+  showButton: boolean;
+  [key: string]: unknown;
+}
+// styeld component
+const ScrollButtonWrapper = styled.div<ScrollButtonProps>`
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: red;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  bottom: 25px;
+  right: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: ${({ showButton }) => (showButton ? 100 : 0)};
+  transform: scale(${({ showButton }) => (showButton ? 1 : 0)});
+  transition: all 0.4s ease-in;
+  z-index: 100;
+  font-size: 12px;
+`;
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > *:not(:last-child) {
+    margin-bottom: 3px;
+  }
+`;
 
 // --------------------------------------------------------
 
 const ScrollTop = () => {
   const [enable, setEnable] = useState(false);
-
-  const handleOnScroll = useCallback((isMounted: any) => {
-    let timeout: any;
+  const handleOnScroll = (isMounted: any) => {
+    let timeout;
     if (
       document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20
@@ -24,13 +61,11 @@ const ScrollTop = () => {
     } else {
       isMounted && setEnable(false);
     }
-  }, []);
-
+  };
   const scrollToTop = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   };
-
   useEffect(() => {
     let isMounted = true;
     if (isMounted)
@@ -41,13 +76,12 @@ const ScrollTop = () => {
         return;
       });
     };
-  }, [handleOnScroll]);
-
+  }, []);
   return (
     <>
       <ScrollButtonWrapper onClick={scrollToTop} showButton={enable}>
         <Row>
-          <IoIosArrowUp size={20} />
+          <IoIosArrowUp size={15} />
           <div>Top</div>
         </Row>
       </ScrollButtonWrapper>
