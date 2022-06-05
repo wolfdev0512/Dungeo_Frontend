@@ -13,6 +13,8 @@ export const Layout = styled.div`
   flex-direction: column;
   align-items: center;
 
+  overflow-x: hidden;
+
   @media screen and (max-width: 1200px) {
     padding: 200px 0px 50px 0px;
   }
@@ -357,4 +359,71 @@ export const FeaTextContainer2 = styled.div`
   @media screen and (max-width: 1024px) {
     padding-right: 0px;
   }
+`;
+
+export const GameLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+`;
+export const GameTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  font-size: 56px;
+  font-weight: 800;
+  color: #f05a28;
+
+  margin-bottom: 50px;
+
+  @media screen and (max-width: 1250px) {
+    font-size: 42px;
+  }
+  @media screen and (max-width: 1024px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 36px;
+  }
+`;
+export const GameDetail = styled.div`
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.7;
+`;
+export const GameImage = styled.div`
+  margin-top: 10px;
+  position: relative;
+  width: 760px;
+  height: 430px;
+
+  @media screen and (max-width: 1250px) {
+    width: 600px;
+    height: 340px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 450px;
+    height: 250px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 430px;
+    height: 180px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 200px;
+    height: 115px;
+  }
+`;
+export const GameText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

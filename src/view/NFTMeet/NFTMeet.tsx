@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 import {
   Layout,
   Text,
@@ -23,6 +24,11 @@ import {
   FeaImage2,
   FeaImageText2,
   FeaTextContainer2,
+  GameLayout,
+  GameTitle,
+  GameDetail,
+  GameImage,
+  GameText,
 } from "./NFTMeet.styled";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -38,7 +44,7 @@ import Image7 from "assets/png/swiper7.png";
 import Image8 from "assets/png/swiper8.png";
 import FeatureImage1 from "assets/png/feature1.png";
 import FeatureImage2 from "assets/png/feature2.png";
-import FeatureImage3 from "assets/png/feature3.png";
+import Game from "assets/png/game.png";
 import Activebg from "assets/png/Active-bg.png";
 
 import Container from "components/Container/Container";
@@ -223,7 +229,6 @@ export default function index() {
               </FeaText>
             </FeaTextContainer1>
           </Feature1>
-
           <Feature2>
             <FeaTextContainer2 data-aos="fade-right">
               <FeaTitle>Feature #2</FeaTitle>
@@ -257,6 +262,18 @@ export default function index() {
               <FeaImageText2>Ri¢hie Ri¢h Spooky</FeaImageText2>
             </FeaImageContainer2>
           </Feature2>
+          <GameLayout>
+            <GameText data-aos="fade-up">
+              <GameTitle>Game</GameTitle>
+              <GameDetail>
+                The Spookeleton Game (P2E), a Play to Earn Game will be built on
+                Solana.
+              </GameDetail>
+            </GameText>
+            <GameImage data-aos="zoom-in">
+              <Image src={Game} layout="fill" alt="No Image" />
+            </GameImage>
+          </GameLayout>
         </ListingBlog>
       </Container>
     </Layout>

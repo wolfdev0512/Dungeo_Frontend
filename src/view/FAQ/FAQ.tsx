@@ -34,6 +34,16 @@ export default function index() {
                 native token, Jargon.
               </Answer>
             </QuestionItem>
+            <QuestionItem>
+              <Question>What is the ”DungeoNEAR” Collective?</Question>
+              <Answer>
+                DungeoNEAR is a degen NEAR gaming and social gaming platform,
+                releasing its first proof of concept NFT collection as “Dungeon
+                Goblins”. This NFT collection is the foundation for a new
+                “P2E(play to earn), S2E(stake to earn)” game model funded by our
+                native token, Jargon.
+              </Answer>
+            </QuestionItem>
           </Questions>
         </MainLayout>
       </Container>

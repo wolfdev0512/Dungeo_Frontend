@@ -39,6 +39,17 @@ export const Header = styled.div`
 export const Questions = styled.div`
   display: flex;
   justify-content: center;
+  & > *:not(:last-child) {
+    margin-right: 30px;
+  }
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    & > *:not(:last-child) {
+      margin-bottom: 20px;
+      margin-right: 0px;
+    }
+  }
 `;
 export const QuestionItem = styled.div`
   width: 80%;
