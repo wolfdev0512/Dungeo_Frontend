@@ -19,10 +19,14 @@ a {
   font-family: "Space Grotesk", sans-serif;
 }
 
+body {
+  scroll-behavior: "smooth";
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-.__Next {
-  overflow-x: hidden;
+.__next {
+  overflow: hidden;
 }
