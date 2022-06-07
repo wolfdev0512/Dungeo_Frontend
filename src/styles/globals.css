@@ -27,6 +27,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.__next {
+#__next {
   overflow: hidden;
 }
