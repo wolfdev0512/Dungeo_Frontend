@@ -22,3 +22,7 @@ a {
 html {
   scroll-behavior: smooth;
 }
+
+.__Next {
+  overflow-x: hidden;
+}
