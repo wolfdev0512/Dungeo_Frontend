@@ -22,11 +22,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     });
   }, []);
 
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(true);
 
   useEffect(() => {
-    Router.events.on("routeChangeStart", () => setLoaded(true));
-    Router.events.on("routeChangeComplete", () => setLoaded(false));
+    setTimeout(() => {
+      setLoaded(false);
+    }, 1500);
   }, []);
 
   useEffect(() => {
