@@ -93,7 +93,7 @@ export default function index() {
                 </Detail>
               </div>
             </RoadmapItem>
-            <RoadmapItem end={true}>
+            <RoadmapItem>
               <Icon>
                 <Image src={Roadmap} layout="fill" alt="No Image" />
               </Icon>

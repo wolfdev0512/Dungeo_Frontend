@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-// @headroom
-import Headroom from "react-headroom";
-
 // -----------------------------------------------------------
 
 export const Layout = styled.div`

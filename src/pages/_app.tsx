@@ -1,9 +1,13 @@
 import "../styles/globals.css";
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import type { AppProps } from "next/app";
+import { Router } from "next/router";
 
 // @Layout
 import AppLayout from "Layout/AppLayout";
+
+// @components
+import Loading from "components/loading";
 
 // @AOS
 import AOS from "aos";
@@ -18,6 +22,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     });
   }, []);
 
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    Router.events.on("routeChangeStart", () => setLoaded(true));
+    Router.events.on("routeChangeComplete", () => setLoaded(false));
+  }, []);
+
   useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");
@@ -27,9 +38,15 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <AppLayout>
-      <Component {...pageProps} />
-    </AppLayout>
+    <>
+      {loaded ? (
+        <Loading />
+      ) : (
+        <AppLayout>
+          <Component {...pageProps} />
+        </AppLayout>
+      )}
+    </>
   );
 }
 
