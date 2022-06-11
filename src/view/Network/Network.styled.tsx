@@ -7,7 +7,7 @@ export const Layout = styled.div`
   height: 100%;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 
   padding-bottom: 200px;
@@ -82,6 +82,7 @@ export const Network = styled.span`
     font-size: 42px;
   }
   @media screen and (max-width: 768px) {
+    text-align: center;
     font-size: 36px;
   }
 
@@ -127,7 +128,7 @@ export const ImageContainer1 = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #0f1826, #020c1a);
+    background: linear-gradient(180deg, #111b2b, #020c1a);
     border-radius: 40px;
     z-index: -1;
     opacity: 0.35;
@@ -179,7 +180,7 @@ export const ImageContainer2 = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #0f1826, #020c1a);
+    background: linear-gradient(180deg, #111b2b, #020c1a);
     border-radius: 40px;
     z-index: -1;
     opacity: 0.35;
@@ -235,4 +236,65 @@ export const Imagelayout = styled.div`
   position: relative;
   width: 100%;
   height: 90%;
+
+  :after {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: 100%;
+    background: linear-gradient(180deg, rgba(15, 24, 38, 0) 30.67%, #0f1826);
+    border-radius: 40px;
+  }
+`;
+
+export const Platform = styled.div`
+  width: 100%;
+
+  border-radius: 20px;
+  padding: 50px 30px;
+
+  margin-top: 300px;
+
+  border: 5px inset rgb(240, 90, 40);
+
+  background: rgb(240, 90, 40);
+  background: linear-gradient(
+    135deg,
+    rgba(240, 90, 40, 1) 0%,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0) 80%,
+    rgba(240, 90, 40, 1) 100%
+  );
+`;
+export const PlatformTitle = styled.div`
+  color: white;
+  font-size: 56px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 1250px) {
+    font-size: 42px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 36px;
+    text-align: center;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 370px) {
+    font-size: 28px;
+  }
+`;
+export const PlatformText = styled.div`
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;

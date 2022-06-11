@@ -3,6 +3,8 @@ import styled from "styled-components";
 // -----------------------------------------------------------
 
 export const Layout = styled.div`
+  margin-top: 140px;
+
   width: 100vw;
 
   padding: 150px 0px;
@@ -11,12 +13,11 @@ export const Layout = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 1250px) {
-    padding: 70px 0px;
+    padding: 100px 0px 150px 0px;
   }
 
   @media screen and (max-width: 575px) {
-    padding: 50px 0px 0px 0px;
-    margin-bottom: 50px;
+    padding: 50px 0px;
   }
 `;
 
@@ -59,12 +60,15 @@ export const Text = styled.div`
 export const Button = styled.div`
   position: relative;
 
+  transition: all 0.4s ease-in-out;
+
   height: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   color: white;
+  background: #141d2c;
   font-size: 20px;
 
   & > *:not(:last-child) {
@@ -73,9 +77,10 @@ export const Button = styled.div`
 
   padding: 0px 45px 0px 35px;
 
-  background: #141d2c;
+  cursor: pointer;
 
-  &:hover {
+  :hover,
+  :focus {
     background: #f05a28;
   }
 
@@ -117,6 +122,7 @@ export const Row = styled.div`
     flex-direction: column;
     & > *:not(:last-child) {
       margin-bottom: 15px;
+      margin-right: 0px;
     }
   }
 `;

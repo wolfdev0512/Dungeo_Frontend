@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import React, { useState, useEffect } from "react";
 import type { AppProps } from "next/app";
-import { Router } from "next/router";
 
 // @Layout
 import AppLayout from "Layout/AppLayout";
@@ -27,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(false);
-    }, 2000);
+    }, 3000);
   }, []);
 
   useEffect(() => {

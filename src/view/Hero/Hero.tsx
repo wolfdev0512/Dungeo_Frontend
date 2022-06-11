@@ -19,7 +19,7 @@ import { FaTwitter, FaDiscord } from "react-icons/fa";
 
 export default function index() {
   return (
-    <Layout>
+    <Layout id="about">
       <Container>
         <MainLayout>
           <Collection data-aos="fade-up" data-aos-duration="1000">
@@ -30,14 +30,18 @@ export default function index() {
             audio track.
           </Text>
           <Row>
-            <Button data-aos="zoom-in-up" data-aos-duration="2000">
-              <FaTwitter size={26} />
-              <div> Follow us on Twitter</div>
-            </Button>
-            <Button data-aos="zoom-in-up" data-aos-duration="2000">
-              <FaDiscord size={26} />
-              <div>Join our Discord</div>
-            </Button>
+            <div data-aos="zoom-in-up" data-aos-duration="2000">
+              <Button>
+                <FaTwitter size={26} />
+                <div> Follow us on Twitter</div>
+              </Button>
+            </div>
+            <div data-aos="zoom-in-up" data-aos-duration="2000">
+              <Button>
+                <FaDiscord size={26} />
+                <div>Join our Discord</div>
+              </Button>
+            </div>
           </Row>
         </MainLayout>
       </Container>

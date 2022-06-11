@@ -19,7 +19,7 @@ import Container from "components/Container/Container";
 
 export default function index() {
   return (
-    <Layout>
+    <Layout id="faq">
       <Container>
         <MainLayout>
           <Header>FAQ</Header>

@@ -18,6 +18,16 @@ export const Layout = styled.div`
   justify-content: center;
   align-items: center;
 
+  cursor: pointer;
+
+  transition: all 0.2s ease-out;
+
+  :hover,
+  :focus {
+    box-shadow: inset 180px 0 0 0 white;
+    color: #f05a28;
+  }
+
   ::before {
     position: absolute;
     content: "";

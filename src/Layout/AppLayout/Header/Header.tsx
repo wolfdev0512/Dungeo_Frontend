@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 // @styled-component
 import {
@@ -28,6 +29,7 @@ import Container from "components/Container/Container";
 // --------------------------------------------------------------
 
 const Header: React.FC = () => {
+  const router = useRouter();
   const [scrollY, setScrollY] = useState(0);
   const [show, setShow] = useState(false);
 
@@ -71,10 +73,41 @@ const Header: React.FC = () => {
               <Image src={LogoImage} alt="No Image" layout="fill" />
             </LogoContainer>
             <Menu>
-              <MenuItem>Buy/Sell &SPKL</MenuItem>
-              <MenuItem>Staking</MenuItem>
-              <MenuItem>Roadmap</MenuItem>
-              <MenuItem>FAQ</MenuItem>
+              <MenuItem
+                onClick={() => {
+                  router.push("/mint");
+                }}
+              >
+                Mint
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  router.push("#about");
+                }}
+              >
+                About
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  router.push("#roadmap");
+                }}
+              >
+                Roadmap
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  router.push("#team");
+                }}
+              >
+                Team
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  router.push("#faq");
+                }}
+              >
+                FAQ
+              </MenuItem>
             </Menu>
             <ConnectButton />
           </MainLayout>

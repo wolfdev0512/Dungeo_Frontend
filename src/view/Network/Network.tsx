@@ -14,6 +14,9 @@ import {
   ImageContainer1,
   ImageContainer2,
   Imagelayout,
+  Platform,
+  PlatformTitle,
+  PlatformText,
 } from "./Network.styled";
 
 // @component
@@ -67,6 +70,17 @@ export default function index() {
           </MainLayout>
         </Container>
       </Background>
+      <Container>
+        <Platform data-aos="zoom-in">
+          <PlatformTitle>What is the “DungeoNEAR” platform?</PlatformTitle>
+          <PlatformText>
+            DungeoNEAR, is a NEAR NFT gaming, staking, minting and game
+            development platform, releasing its first proof of concept NFT
+            collection as “Dungeon Goblin’s”. This NFT collection is the
+            foundation for a new “Stake, Play, Earn” game ecosystem model.
+          </PlatformText>
+        </Platform>
+      </Container>
     </Layout>
   );
 }

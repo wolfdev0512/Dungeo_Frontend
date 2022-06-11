@@ -6,7 +6,6 @@ import "swiper/css/free-mode";
 // -----------------------------------------------------------
 
 export const Layout = styled.div`
-  padding: 200px 0px 250px 0px;
   width: 100%;
 
   display: flex;
@@ -14,13 +13,6 @@ export const Layout = styled.div`
   align-items: center;
 
   overflow-x: hidden;
-
-  @media screen and (max-width: 1200px) {
-    padding: 200px 0px 50px 0px;
-  }
-  @media screen and (max-width: 575px) {
-    padding: 0px 0px 50px 0px;
-  }
 `;
 
 export const SwiperLayout = styled.div`

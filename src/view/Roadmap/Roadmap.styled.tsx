@@ -10,11 +10,15 @@ export const Layout = styled.div<{ image: any }>`
   background-position: 50% -140px;
 
   margin-bottom: 175px;
+  padding: 250px 0px 0px 0px;
 
   display: flex;
   justify-content: center;
   @media screen and (max-width: 570px) {
     margin-bottom: 125px;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 200px 0px 0px 0px;
   }
 `;
 

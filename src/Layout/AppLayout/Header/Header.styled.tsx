@@ -3,7 +3,8 @@ import styled from "styled-components";
 // -----------------------------------------------------------
 
 export const Layout = styled.div`
-  position: sticky;
+  position: fixed;
+  position: -webkit-sticky;
 
   top: 0;
 
@@ -79,15 +80,17 @@ export const Menu = styled.div`
 `;
 
 export const MenuItem = styled.a`
+  width: 80px;
   position: relative;
 
+  margin: 0 10px;
   z-index: 1;
-  margin: 0 15px;
 
   color: #fff;
   font-size: 18px;
   font-weight: 500;
 
+  text-align: center;
   text-decoration: none;
 
   transition: all 0.2s;
@@ -113,10 +116,16 @@ export const MenuItem = styled.a`
 `;
 
 export const MobileLayout = styled.div`
-  position: relative;
-  display: none;
-  background: black;
+  position: fixed;
+
+  top: 0;
+
   width: 100%;
+
+  display: none;
+  background: #020c1a;
+  z-index: 2;
+
   @media screen and (max-width: 1024px) {
     display: flex;
     justify-content: center;
