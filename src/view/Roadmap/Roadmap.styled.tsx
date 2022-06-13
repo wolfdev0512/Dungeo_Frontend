@@ -9,16 +9,19 @@ export const Layout = styled.div<{ image: any }>`
   background-repeat: no-repeat;
   background-position: 50% -140px;
 
-  margin-bottom: 175px;
-  padding: 250px 0px 0px 0px;
+  padding: 250px 0px 50px 0px;
 
   display: flex;
   justify-content: center;
-  @media screen and (max-width: 570px) {
-    margin-bottom: 125px;
-  }
+
   @media screen and (max-width: 1200px) {
-    padding: 200px 0px 0px 0px;
+    padding: 200px 0px 50px 0px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 150px 0px 50px 0px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 100px 0px 50px 0px;
   }
 `;
 
@@ -26,6 +29,7 @@ export const MainLayout = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 export const Header = styled.div`
   text-align: center;
 
@@ -60,13 +64,13 @@ export const RoadmapContainer = styled.div`
     padding: 0px 0px;
   }
 `;
-export const RoadmapItem = styled.div<{ end?: boolean }>`
+export const RoadmapItem = styled.div<{ end?: string }>`
   position: relative;
 
   display: flex;
 
   ::after {
-    ${({ end }) => (end ? "display:none" : "")}
+    ${({ end }) => (end === "true" ? "display:none" : "")}
     position: absolute;
     content: "";
     top: 37px;

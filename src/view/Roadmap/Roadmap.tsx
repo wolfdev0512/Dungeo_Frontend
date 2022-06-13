@@ -105,7 +105,7 @@ export default function index() {
               </div>
             </RoadmapItem>
 
-            <RoadmapItem end>
+            <RoadmapItem end="true">
               <Icon>
                 <Image src={Roadmap} layout="fill" alt="No Image" />
               </Icon>

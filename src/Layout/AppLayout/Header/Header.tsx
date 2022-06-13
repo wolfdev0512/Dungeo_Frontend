@@ -31,9 +31,10 @@ import Container from "components/Container/Container";
 const Header: React.FC = () => {
   const router = useRouter();
   const [scrollY, setScrollY] = useState(0);
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(-1);
 
   const dropMenuRef = useRef<any>(null);
+  const menuButtonRef = useRef<any>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,14 +48,19 @@ const Header: React.FC = () => {
   }, []);
 
   const handleClickOutside = (e: any) => {
-    if (dropMenuRef.current && dropMenuRef.current.contains(e.target)) {
+    if (dropMenuRef.current.contains(e.target)) {
       return;
+    } else {
+      if (menuButtonRef.current.contains(e.target)) {
+        return;
+      } else {
+        setShow(-1);
+      }
     }
-    setShow(false);
   };
 
   useEffect(() => {
-    if (show) {
+    if (show > 0) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -69,7 +75,13 @@ const Header: React.FC = () => {
       <Layout>
         <Container>
           <MainLayout>
-            <LogoContainer back={LogoBg.src} top={scrollY == 0}>
+            <LogoContainer
+              onClick={() => {
+                router.push("/");
+              }}
+              back={LogoBg.src}
+              top={scrollY == 0}
+            >
               <Image src={LogoImage} alt="No Image" layout="fill" />
             </LogoContainer>
             <Menu>
@@ -124,24 +136,55 @@ const Header: React.FC = () => {
               <ConnectButton />
               <MenuButton
                 onClick={() => {
-                  setShow(!show);
+                  setShow(show * -1);
                 }}
+                ref={menuButtonRef}
               >
                 <BiMenu size={24} />
               </MenuButton>
             </ButtonGroup>
           </MobileMainLayout>
-          <MobileMenu show={show} ref={dropMenuRef}>
-            <MobileMenuItem onClick={() => setShow(false)}>
-              Buy/Sell &$SPKL
+          <MobileMenu show={show > 0} ref={dropMenuRef}>
+            <MobileMenuItem
+              onClick={() => {
+                router.push("/mint");
+                setShow(-1);
+              }}
+            >
+              Mint
             </MobileMenuItem>
-            <MobileMenuItem onClick={() => setShow(false)}>
-              Staking
+            <MobileMenuItem
+              onClick={() => {
+                router.push("#about");
+                setShow(-1);
+              }}
+            >
+              About
             </MobileMenuItem>
-            <MobileMenuItem onClick={() => setShow(false)}>
+            <MobileMenuItem
+              onClick={() => {
+                router.push("#roadmap");
+                setShow(-1);
+              }}
+            >
               Roadmap
             </MobileMenuItem>
-            <MobileMenuItem onClick={() => setShow(false)}>FAQ</MobileMenuItem>
+            <MobileMenuItem
+              onClick={() => {
+                router.push("#team");
+                setShow(-1);
+              }}
+            >
+              Team
+            </MobileMenuItem>
+            <MobileMenuItem
+              onClick={() => {
+                router.push("#faq");
+                setShow(-1);
+              }}
+            >
+              FAQ
+            </MobileMenuItem>
           </MobileMenu>
         </Container>
       </MobileLayout>

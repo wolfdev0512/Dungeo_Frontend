@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 export const Layout = styled.div`
   position: fixed;
-  position: -webkit-sticky;
 
   top: 0;
 
@@ -38,6 +37,8 @@ export const LogoContainer = styled.div<{ back: any; top: boolean }>`
 
   width: 180px;
   height: 120px;
+
+  cursor: pointer;
 
   ::after {
     opacity: ${({ top }: any) => (top ? "1" : "0")};
@@ -137,6 +138,7 @@ export const MobileMainLayout = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 `;
 
 export const MenuButton = styled.div`
@@ -145,14 +147,23 @@ export const MenuButton = styled.div`
   margin-left: 10px;
 
   background: #f05a28;
+  transition: all 0.2s ease-in-out;
 
   color: white;
   font-weight: 600;
   font-size: 18px;
 
+  cursor: pointer;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  :hover,
+  :focus {
+    box-shadow: inset 180px 0 0 0 white;
+    color: #f05a28;
+  }
 
   ::before {
     position: absolute;
@@ -192,15 +203,52 @@ export const ButtonGroup = styled.div`
 export const MobileMenu = styled.div<{ show: boolean }>`
   position: absolute;
 
-  display: ${({ show }) => (show ? "block" : "none")};
-
+  border-radius: 20px;
   top: 100px;
   left: 0;
   width: 100%;
+
   @media screen and (max-width: 768px) {
     top: 90px;
   }
+
   z-index: 2;
+
+  visibility: ${({ show }) => (show ? "visible" : "collapse")};
+
+  & > div {
+    ${({ show }) =>
+      show
+        ? `opacity: 1;
+      visibility: visible;
+        &:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+  &:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+  &:nth-child(4) {
+    transition-delay: 0.3s;
+  }
+  &:nth-child(5) {
+    transition-delay: 0.4s;
+  }
+      `
+        : `opacity: 0;
+      visibility: hidden;
+        &:nth-child(1) {
+    transition-delay: 0.4s;
+  }
+  &:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+  &:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+  &:nth-child(4) {
+    transition-delay: 0.1s;
+  }`};
+  }
 `;
 export const MobileMenuItem = styled.div`
   width: 100%;
@@ -208,8 +256,27 @@ export const MobileMenuItem = styled.div`
   display: flex;
   align-items: center;
   color: white;
+
+  cursor: pointer;
+
   padding: 20px;
   font-size: 16px;
   background: #f05a28;
-  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  transition: all 0.2s;
+  font-size: 20px;
+
+  :hover,
+  :focus {
+    background: white;
+    color: #f05a28;
+  }
+  &:first-child {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  &:last-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 `;

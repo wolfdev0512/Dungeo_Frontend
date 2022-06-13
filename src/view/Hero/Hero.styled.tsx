@@ -3,21 +3,19 @@ import styled from "styled-components";
 // -----------------------------------------------------------
 
 export const Layout = styled.div`
-  margin-top: 140px;
-
   width: 100vw;
 
-  padding: 150px 0px;
+  padding: 320px 0px 150px 0px;
 
   display: flex;
   justify-content: center;
 
   @media screen and (max-width: 1250px) {
-    padding: 100px 0px 150px 0px;
+    padding: 270px 0px 50px 0px;
   }
 
   @media screen and (max-width: 575px) {
-    padding: 50px 0px;
+    padding: 220px 0px 50px 0px;
   }
 `;
 
@@ -28,11 +26,12 @@ export const MainLayout = styled.div`
 
 export const Collection = styled.div`
   color: #f05a28;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 30px;
   @media screen and (max-width: 768px) {
     text-align: center;
+    font-size: 18px;
   }
 `;
 

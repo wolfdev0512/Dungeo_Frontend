@@ -5,13 +5,19 @@ import styled from "styled-components";
 export const Layout = styled.div`
   width: 100vw;
 
-  margin-bottom: 120px;
-
   display: flex;
   justify-content: center;
 
+  padding: 250px 0px 200px 0px;
+
+  @media screen and (max-width: 1200px) {
+    padding: 200px 0px 200px 0px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 150px 0px 200px 0px;
+  }
   @media screen and (max-width: 768px) {
-    margin-bottom: 60px;
+    padding: 100px 0px 200px 0px;
   }
 `;
 
@@ -36,9 +42,10 @@ export const Header = styled.div`
     font-size: 36px;
   }
 `;
-export const Questions = styled.div`
+
+export const Row = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   & > *:not(:last-child) {
     margin-right: 30px;
   }
@@ -46,27 +53,40 @@ export const Questions = styled.div`
     flex-direction: column;
     align-items: center;
     & > *:not(:last-child) {
-      margin-bottom: 20px;
       margin-right: 0px;
+      margin-bottom: 20px;
     }
   }
 `;
+
+export const Questions = styled.div`
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+export const Col = styled.div`
+  display: flex;
+  flex-direction: column;
+  & > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+`;
+
 export const QuestionItem = styled.div`
-  width: 80%;
+  width: 100%;
   padding: 30px 25px;
   background: linear-gradient(
     270deg,
     rgba(20, 29, 44, 0.5),
     rgba(2, 12, 26, 0)
   );
-
-  @media screen and (max-width: 1250px) {
-    width: 90%;
+  :hover {
+    background: rgba(20, 29, 44);
   }
 
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
+  transition: all 0.3s;
 `;
 export const Question = styled.div`
   font-size: 28px;

@@ -26,11 +26,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(false);
-    }, 3000);
+    }, 2500);
   }, []);
 
   useEffect(() => {
-    // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");
     if (jssStyles?.parentElement) {
       jssStyles.parentElement.removeChild(jssStyles);
