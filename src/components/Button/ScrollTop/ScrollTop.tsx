@@ -47,8 +47,8 @@ const Row = styled.div`
 
 const ScrollTop = () => {
   const [enable, setEnable] = useState(false);
+  let timeout: any;
   const handleOnScroll = (isMounted: any) => {
-    let timeout;
     if (
       document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20
