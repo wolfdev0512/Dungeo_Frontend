@@ -24,7 +24,6 @@ export const MintForm = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #15151d;
   box-shadow: 0 0 24px 0 rgba(75, 75, 88, 54%);
   border-radius: 20px;
   padding: 50px;
