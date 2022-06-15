@@ -30,12 +30,12 @@ export const MintForm = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 90%;
-    padding: 30px;
+    padding: 50px 30px;
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    padding: 0px;
+    padding: 50px 0px;
   }
 `;
 
