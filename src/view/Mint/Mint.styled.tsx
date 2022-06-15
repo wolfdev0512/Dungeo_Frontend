@@ -36,7 +36,7 @@ export const MintForm = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding: 0px;
   }
 `;
 
