@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(false);
-    }, 2500);
+    }, 3000);
   }, []);
 
   useEffect(() => {
