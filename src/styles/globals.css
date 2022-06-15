@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("../assets/font/asai-haxxor.ttf");
+}
+
 html,
 body {
   padding: 0;
