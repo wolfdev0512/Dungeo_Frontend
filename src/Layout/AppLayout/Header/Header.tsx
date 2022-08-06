@@ -87,18 +87,20 @@ const Header: React.FC = () => {
             <Menu>
               <MenuItem
                 onClick={() => {
-                  router.push("/mint");
-                }}
-              >
-                Mint
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
                   router.push("#about");
                 }}
               >
                 About
               </MenuItem>
+
+              <MenuItem
+                onClick={() => {
+                  router.push("#mint");
+                }}
+              >
+                Mint
+              </MenuItem>
+
               <MenuItem
                 onClick={() => {
                   router.push("#roadmap");
@@ -106,6 +108,7 @@ const Header: React.FC = () => {
               >
                 Roadmap
               </MenuItem>
+
               <MenuItem
                 onClick={() => {
                   router.push("#team");
@@ -147,19 +150,19 @@ const Header: React.FC = () => {
           <MobileMenu show={show > 0} ref={dropMenuRef}>
             <MobileMenuItem
               onClick={() => {
-                router.push("/mint");
-                setShow(-1);
-              }}
-            >
-              Mint
-            </MobileMenuItem>
-            <MobileMenuItem
-              onClick={() => {
                 router.push("#about");
                 setShow(-1);
               }}
             >
               About
+            </MobileMenuItem>
+            <MobileMenuItem
+              onClick={() => {
+                router.push("#mint");
+                setShow(-1);
+              }}
+            >
+              Mint
             </MobileMenuItem>
             <MobileMenuItem
               onClick={() => {

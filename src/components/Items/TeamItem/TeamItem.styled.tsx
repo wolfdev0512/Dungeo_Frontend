@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 // -----------------------------------------------------------
 export const Layout = styled.div`
@@ -81,8 +82,8 @@ export const Name = styled.div`
 export const Icons = styled.div`
   margin-top: 20px;
   display: flex;
-`;
-export const Icon = styled.div`
   color: white;
+`;
+export const Icon = styled(Link)`
   cursor: pointer;
 `;

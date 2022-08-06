@@ -54,6 +54,7 @@ export const LogoContainer = styled.div<{ back: any; top: boolean }>`
     background-position: 50% 50%;
     background-size: cover;
   }
+
   @media screen and (max-width: 1024px) {
     width: 150px;
     height: 100px;
@@ -62,14 +63,17 @@ export const LogoContainer = styled.div<{ back: any; top: boolean }>`
       display: none;
     }
   }
+
   @media screen and (max-width: 1024px) {
     width: 135px;
     height: 90px;
   }
+
   @media screen and (max-width: 1024px) {
     width: 135px;
     height: 90px;
   }
+
   @media screen and (max-width: 768px) {
     width: 120px;
     height: 80px;
@@ -108,6 +112,7 @@ export const MenuItem = styled.a`
     bottom: -5px;
     transform: scaleX(0);
   }
+
   :hover {
     color: #f05a28;
     ::after {
@@ -175,6 +180,7 @@ export const MenuButton = styled.div`
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
   }
+
   ::after {
     position: absolute;
     content: "";
@@ -190,6 +196,7 @@ export const MenuButton = styled.div`
     width: 50px;
     height: 50px;
   }
+
   @media screen and (max-width: 425px) {
     width: 45px;
     height: 45px;
@@ -200,6 +207,7 @@ export const ButtonGroup = styled.div`
   display: flex;
   align-items: center;
 `;
+
 export const MobileMenu = styled.div<{ show: boolean }>`
   position: absolute;
 
@@ -250,6 +258,7 @@ export const MobileMenu = styled.div<{ show: boolean }>`
   }`};
   }
 `;
+
 export const MobileMenuItem = styled.div`
   width: 100%;
   height: 64px;
@@ -271,10 +280,12 @@ export const MobileMenuItem = styled.div`
     background: white;
     color: #f05a28;
   }
+
   &:first-child {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
+
   &:last-child {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;

@@ -38,6 +38,7 @@ export const Layout = styled.div`
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
   }
+
   ::after {
     position: absolute;
     content: "";
@@ -48,16 +49,19 @@ export const Layout = styled.div`
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
+
   @media screen and (max-width: 1024px) {
     width: 150px;
     height: 50px;
     font-size: 14px;
   }
+
   @media screen and (max-width: 768px) {
     width: 120px;
     height: 50px;
     font-size: 14px;
   }
+
   @media screen and (max-width: 425px) {
     width: 110px;
     height: 45px;

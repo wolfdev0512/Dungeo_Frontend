@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 
 // @component
-import { FAQ, Hero, Mint, Team, Network, NFTMeet, Roadmap } from "view";
+import { Hero, Mint, Network, NFTMeet, Roadmap, Team, FAQ } from "view";
 
 //--------------------------------------------------------------------
 

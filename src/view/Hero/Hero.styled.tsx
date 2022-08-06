@@ -5,17 +5,17 @@ import styled from "styled-components";
 export const Layout = styled.div`
   width: 100vw;
 
-  padding: 320px 0px 250px 0px;
+  padding: 320px 0px 150px 0px;
 
   display: flex;
   justify-content: center;
 
   @media screen and (max-width: 1250px) {
-    padding: 270px 0px 150px 0px;
+    padding: 270px 0px 50px 0px;
   }
 
   @media screen and (max-width: 575px) {
-    padding: 220px 0px 150px 0px;
+    padding: 220px 0px 50px 0px;
   }
 `;
 

@@ -21,7 +21,7 @@ export const Layout = styled.div`
 
 export const MainLayout = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
 
   @media screen and (max-width: 1024px) {

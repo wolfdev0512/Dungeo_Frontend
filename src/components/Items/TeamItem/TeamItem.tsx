@@ -25,9 +25,6 @@ type Props = {
 //----------------------------------------------------------------
 
 const Container: React.FC<{ data: Props }> = ({ data }) => {
-  const changeRoute = (url: string) => {
-    console.log(url);
-  };
   return (
     <Layout>
       <ImageLayout>
@@ -39,8 +36,10 @@ const Container: React.FC<{ data: Props }> = ({ data }) => {
         <Name>{data.name}</Name>
         <Icons>
           {data.connect.map((item, index) => (
-            <Icon key={index} onClick={() => changeRoute(item.link)}>
-              <item.icon />
+            <Icon key={index} href={item.link}>
+              <a target="_blank">
+                <item.icon />
+              </a>
             </Icon>
           ))}
         </Icons>
