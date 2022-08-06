@@ -10,7 +10,7 @@ export const Layout = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 50px;
 
   @media screen and (max-width: 768px) {

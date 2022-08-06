@@ -13,38 +13,58 @@ import Image1 from "assets/png/skeleton-1.png";
 import Image2 from "assets/png/skeleton-2.png";
 import Image3 from "assets/png/skeleton-3.png";
 import Image4 from "assets/png/skeleton-4.png";
+import Image5 from "assets/png/skeleton-5.png";
+import Image6 from "assets/png/skeleton-6.png";
 
 const TeamInfo = [
   {
     image: Image1,
-    role: "Founder",
-    description: "We call him a Captain of Ninja Boat, others call him Kage.",
-    name: "William Clark",
-    connect: [{ icon: FaTwitter, link: "/" }],
-  },
-  {
-    image: Image2,
-    role: "CEO",
-    description: "The lead of Ninja Champions who always brings Victory.",
-    name: "Carlos De La Cruz",
-    connect: [{ icon: FaTwitter, link: "/" }],
+    role: "Product Manager",
+    description: "USA",
+    name: "Austin",
+    connect: [{ icon: FaTwitter, link: "http://twitter.com/akatheregicide" }],
   },
   {
     image: Image3,
-    role: "CMO",
-    description: "The best Marketing Manager on Social Media Platforms",
-    name: "William Clark",
-    connect: [{ icon: FaTwitter, link: "/" }],
+    role: "Marketing & Team Lead",
+    description: "Nigeria",
+    name: "Joyce",
+    connect: [{ icon: FaTwitter, link: "http://twitter.com/brownie_jay1" }],
+  },
+  {
+    image: Image2,
+    role: "Marketing & Digital Content",
+    description: "Nigeria",
+    name: "Jay",
+    connect: [{ icon: FaTwitter, link: "http://twtter.com/onyijay09" }],
+  },
+  {
+    image: Image6,
+    role: "Senior Developer",
+    description: "Netherlands",
+    name: "Jordy",
+    connect: [
+      {
+        icon: FaDiscord,
+        link: "https://discordapp.com/users/969886094881599508",
+      },
+    ],
   },
   {
     image: Image4,
-    role: "Head Mod",
-    description: "Make our Ninja Club full of excitement and happiness.",
-    name: "William Clark",
-    connect: [{ icon: FaTwitter, link: "/" }],
+    role: "Music Producer",
+    description: "USA",
+    name: "Bodi",
+    connect: [{ icon: FaTwitter, link: "http://twitter.com/drummerchops" }],
+  },
+  {
+    image: Image5,
+    role: "Graphic Designer & Artist",
+    description: "Philippines",
+    name: "Alech",
+    connect: [{ icon: FaTwitter, link: "http://twitter.com/AlechNatividad" }],
   },
 ];
-
 // ----------------------------------------------------------
 
 export default function index() {

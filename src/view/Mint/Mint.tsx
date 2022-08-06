@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 // @styled-component
@@ -11,6 +11,12 @@ import {
   MintLayout,
   Text,
   MainLayout,
+  MintButtonAction,
+  MintInputContainer,
+  MintNumberInput,
+  MintInputActions,
+  MintInputIncrease,
+  MintInputDecrease,
 } from "./Mint.styled";
 
 // @component
@@ -19,31 +25,46 @@ import Container from "components/Container/Container";
 // @assets
 import ImageNFT from "assets/gif/dungeo.gif";
 
-// @component
-import { MintButton } from "components/Button";
-import { MintInput } from "components/Input";
+// @context
+import { useSupplyContext } from "context/SupplyContext";
+
+const BN = require("bn.js");
 
 // ----------------------------------------------------------
 
 export default function Mint() {
-  const [status, setStatus] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [supply, setSupply] = useState(0);
+  const { totalSupply } = useSupplyContext();
 
-  const [mintable, setMintable] = useState(20);
-  const [mintPrice, setMintPrice] = useState(0);
-  const [amount, setAmount] = useState(0);
-  const [is_List, setIs_List] = useState(false);
-  const [account, setAccount] = useState(
-    "0x0cC5C63E72DD94992B33c7C29a45667dC39BcC7f"
-  );
+  const [status, setStatus] = useState(2);
+  const [mintable, setMintable] = useState(5777);
+  const [amount, setAmount] = useState(1);
 
-  const handleConnectWallet = () => {
-    console.log("Wallet Connect");
-  };
+  useEffect(() => {
+    setMintable(5777 - totalSupply);
+  }, [totalSupply]);
 
-  const handleNFTMint = () => {
-    console.log("NFT mint");
+  const mintNFT = async () => {
+    console.log("object");
+    let recentCount = totalSupply;
+    // for (let i = 1; i <= amount; i++) {
+    console.log(totalSupply);
+    console.log(recentCount);
+    await window.contract.nft_mint(
+      {
+        token_id: `Goblin-${Number(recentCount) + 1}`,
+        metadata: {
+          title: `Dungeon Goblin - #${Number(recentCount) + 1}`,
+          description: "Dungeon Goblin’s Minted on NEARVangelist",
+          media: `https://gateway.pinata.cloud/ipfs/QmVquedp52qKDmQwBFgW7guFXffU1vh4yd5nwx9LeaUhCp/${
+            Number(recentCount) + 1
+          }.png`,
+        },
+        receiver_id: window.accountId,
+      },
+      300000000000000, // attached GAS (optional)
+      new BN("11000000000000000000000000")
+    );
+    // }
   };
 
   return (
@@ -55,35 +76,40 @@ export default function Mint() {
               <ImageContainer>
                 <Image src={ImageNFT} alt="No Image" layout="fill" />
               </ImageContainer>
-              <TextSupply>{supply} / 10000</TextSupply>
+              <TextSupply>{totalSupply} / 5777</TextSupply>
             </ImageLayout>
             <MintLayout>
               <Text>{status === 1 ? "Presale" : "Public sale"}</Text>
-              <Text>Price: {mintPrice / 1000000000000000000} ETH</Text>
-              {mintable !== 0 && status === 1 && (
-                <Text>Mintable NFTs: {mintable}</Text>
-              )}
+              <Text>Price: 11 Near</Text>
               <Text>
                 Address:
-                {account
-                  ? `${account.substring(0, 6)}...${account.substring(38)}`
-                  : "------"}
+                {" " + window.accountId}
               </Text>
-
-              <MintInput
-                amount={amount}
-                setAmount={setAmount}
-                mintable={mintable}
-              />
-              <MintButton
-                loading={loading}
-                currentAcc={account}
-                mintable={mintable}
-                status={status}
-                isList={is_List}
-                connect={handleConnectWallet}
-                mint={handleNFTMint}
-              />
+              <MintInputContainer>
+                <MintNumberInput value={amount} readOnly />
+                <MintInputActions>
+                  <MintInputIncrease
+                    onClick={() => {
+                      setAmount(amount + 1);
+                    }}
+                  >
+                    +
+                  </MintInputIncrease>
+                  <MintInputDecrease
+                    onClick={() => {
+                      setAmount(amount - 1);
+                    }}
+                  >
+                    -
+                  </MintInputDecrease>
+                </MintInputActions>
+              </MintInputContainer>
+              <MintButtonAction
+                disabled={mintable <= 0}
+                onClick={() => mintNFT()}
+              >
+                Mint
+              </MintButtonAction>
             </MintLayout>
           </MintForm>
         </MainLayout>

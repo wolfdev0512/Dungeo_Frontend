@@ -11,8 +11,9 @@ export const Layout = styled.div`
   background: #020c1a;
 
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   z-index: 1;
 `;
